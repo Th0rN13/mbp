@@ -1,6 +1,21 @@
 {
-  "dependencies": {
+  "name": "mbp",
+  "version": "0.1.0",
+  "description": "Markup BoilerPlate",
+  "main": "index.js",
+  "repository": "https://github.com/Th0rN13/mbp.git",
+  "author": "Th0rN13 <th0r@inbox.ru>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "rollup": "^1.28.0",
+    "cssnano": "^4.1.10",
     "postcss": "^7.0.26",
-    "rollup": "^1.28.0"
+    "postcss-color-mod-function": "^3.0.3",
+    "postcss-nested": "^4.2.1",
+    "postcss-preset-env": "^6.7.0"
   }
 }
