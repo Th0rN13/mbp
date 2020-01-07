@@ -8,16 +8,18 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build:html": "copyfiles -f ./src/**/*.html build/",
+    "build:html": "cpx src/**/*.html build/",
     "build:js": "rollup -c",
     "build:css": "postcss src/css/*.css -d build/css/",
     "build": "npm-run-all --parallel build:*",
+    "watch:html": "cpx src/**/*.html build/ -w",
     "watch:js": "rollup -c -w",
     "watch:css": "postcss -w src/css/*.css -d build/css/",
+    "watch:serve": "sirv build -H 0.0.0.0",
     "watch": "npm-run-all --parallel watch:*"
   },
   "devDependencies": {
-    "copyfiles": "^2.1.1",
+    "cpx": "^1.5.0",
     "cssnano": "^4.1.10",
     "html-minifier": "^4.0.0",
     "npm-run-all": "^4.1.5",
@@ -27,7 +29,6 @@
     "postcss-nested": "^4.2.1",
     "postcss-preset-env": "^6.7.0",
     "rollup": "^1.28.0",
-    "sirv": "^0.4.2",
     "sirv-cli": "^0.4.5"
   },
   "dependencies": {}
