@@ -13,10 +13,12 @@
     "build:css": "postcss src/css/*.css -d build/css/",
     "build": "npm-run-all --parallel build:*",
     "watch:html": "cpx src/**/*.html build/ -w",
+    "watch:images": "cpx src/images/**/*.{png,jpg,jpeg,svg,webp} build/images/ -w",
     "watch:js": "rollup -c -w",
-    "watch:css": "postcss -w src/css/*.css -d build/css/",
-    "watch:serve": "sirv build -H 0.0.0.0",
-    "watch": "npm-run-all --parallel watch:*"
+    "watch:css": "postcss -w src/css/*.pcss -d build/css/ --ext css",
+    "serve": "sirv start build -H 0.0.0.0",
+    "watch": "npm-run-all --parallel watch:*",
+    "dev": "npm-run-all --parallel watch serve"
   },
   "devDependencies": {
     "cpx": "^1.5.0",
