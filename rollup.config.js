@@ -3,5 +3,8 @@ export default {
   output: {
     file: 'build/js/main.js',
     format: 'cjs'
-  }
+  },
+  watch: {
+    clearScreen: false
+  },
 };
